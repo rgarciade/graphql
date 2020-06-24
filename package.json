@@ -9,7 +9,7 @@
     "build": "tsc -p . && ncp src/schema build/npo",
     "start:dev": "npm run build:dev",
     "build:dev": "nodemon \"src/server.ts\" --exec \"ts-node\" src/server.ts -e ts,graphql",
-    "createTsconfig":"npx tsc --init --rootDir src --outDir build --lib dom,es6 --module commonjs --removeComments --target es6"
+    "createTsconfig": "npx tsc --init --rootDir src --outDir build --lib dom,es6 --module commonjs --removeComments --target es6"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/rgarciade/graphql#readme",
   "dependencies": {
+    "apollo-server-express": "^2.15.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-graphql": "^0.9.0",
     "graphql": "^15.1.0",
     "graphql-import-node": "0.0.4",
     "graphql-playground-middleware-express": "^1.7.18",
