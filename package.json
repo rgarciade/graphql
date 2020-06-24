@@ -8,7 +8,7 @@
     "start": "node build/server.js",
     "build": "tsc -p . && ncp src/schema build/npo",
     "start:dev": "npm run build:dev",
-    "build:dev": "nodemon \"src/server.ts\" --exec \"ts-node\" src/server.ts -e ts,graphql",
+    "build:dev": "nodemon \"src/server.ts\" --exec \"ts-node\" src/server.ts -e ts,json,graphql",
     "createTsconfig": "npx tsc --init --rootDir src --outDir build --lib dom,es6 --module commonjs --removeComments --target es6"
   },
   "repository": {
@@ -31,6 +31,7 @@
     "graphql-playground-middleware-express": "^1.7.18",
     "graphql-tools": "^6.0.10",
     "http": "0.0.1-security",
+    "lodash": "^4.17.15",
     "ncp": "^2.0.0",
     "typescript": "^3.9.5"
   },
