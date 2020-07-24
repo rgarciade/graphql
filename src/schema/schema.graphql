@@ -1,5 +1,39 @@
- type Query {
-    hola: String!
-    holaConNombre(nombre: String!): String!
-    holaCaracola: String!
+type Query {
+     "Lista de los estudiantes de la academia"
+    estudiantes: [Estudiante!]!
+}
+"Informacion de los estudiantes"
+type Estudiante {
+    "Identificativo del estudiante"
+    id: ID!,
+    name: String!
+    email: String!,
+    website: String,
+    courses: [Curso!]!
+}
+type Curso {
+    id: ID!,
+    title: String!,
+    description: String!,
+    clases: Int!,
+    time: Float!,
+    logo: String!,
+    level: Nivel!,
+    path: String!,
+    teacher: String!,
+    students: [Estudiante],
+    reviews: [Valoracion!]!,
+}
+
+enum Nivel {
+    TODOS
+    NOVATOS
+    INTERMEDIO
+    EXPERTO
+}
+type Valoracion {
+    id: ID!
+    name: String!
+    points: Float!
+    comments: String
 }

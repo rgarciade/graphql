@@ -1,17 +1,10 @@
 import { IResolvers } from "graphql-tools"
-
+import { database } from '../data/data.store'
 const query : IResolvers = {
     Query : {
-        hola(): string {
-            return 'hola mundooooqqq'
-        },
-        holaConNombre(__:void, args): string{
-            return `hola mundo ${args.nombre}`
-        },
-        
-        holaCaracola(){
-            return 'hola Caracola'
-        },
+        estudiantes(): any {
+            return database.estudiantes
+        }
     }
 }
 export default query
