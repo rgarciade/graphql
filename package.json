@@ -32,7 +32,7 @@
     "graphql-playground-middleware-express": "^1.7.18",
     "graphql-tools": "^6.0.10",
     "http": "0.0.1-security",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "ncp": "^2.0.0",
     "typescript": "^3.9.5"
   },
